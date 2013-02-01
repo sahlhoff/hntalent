@@ -1,7 +1,8 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , mongoose = require('mongoose');
 
 var app = express();
 
@@ -29,6 +30,10 @@ app.configure('production', function(){
 
 // Setup routes
 require('./routes')(app);
+
+
+// Connect mongoose
+mongoose.connect('mongodb://sahlhoff:your1mom1goes1to1college@ds043957.mongolab.com:43957/hackerjobs');
 
 
 http.createServer(app).listen(app.get('port'), function(){
