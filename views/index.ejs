@@ -2,10 +2,27 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/foundation.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="fixed contain-to-grid">
+		<nav class="top-bar">
+		  <ul>
+		    <li class="name"><h1><a href="#">Title</a></h1></li>
+		    <li class="toggle-topbar"><a href="#"></a></li>
+		  </ul>
+		  <section>
+		    <ul class="left">
+		      <li><a href="#">Link</a></li>
+		    </ul>
+
+		    <ul class="right">
+		      <li><a href="#">Link</a></li>
+		    </ul>
+		  </section>
+		</nav>
+	</div>
+
   </body>
 </html>
