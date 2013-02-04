@@ -1,0 +1,68 @@
+	<div class="row">
+		<div class="three columns">
+			<h4>February 2013</h4>
+
+		  	<h5>Perks</h5>
+		    <input type="checkbox" ng-model="perks" ng-true-value="Beer" ng-false-value=""> Beer <br/>
+		    <input type="checkbox" ng-model="perks" ng-true-value="Food" ng-false-value=""> Food <br/>
+		    <input type="checkbox" ng-model="perks" ng-true-value="Gym" ng-false-value=""> Gym <br/>
+		    <input type="checkbox" ng-model="perks" ng-true-value="Pets" ng-false-value=""> Pets <br/>
+
+		    <h5>City</h5>
+		    <input type="checkbox" ng-model="city" ng-true-value="San Francisco" ng-false-value="">  San Francisco <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Redwood" ng-false-value=""> Redwood <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Palo Alto" ng-false-value=""> Palo Alto <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="LA" ng-false-value=""> LA <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Portland" ng-false-value=""> Portland <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Seattle" ng-false-value=""> Seattle<br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Austin" ng-false-value=""> Austin <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Denver" ng-false-value=""> Denver <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Chicago" ng-false-value=""> Chicago <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Atlanta" ng-false-value=""> Atlanta <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="NYC" ng-false-value=""> NYC <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="Boston" ng-false-value=""> Boston <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="DC" ng-false-value=""> DC <br/>
+		    <input type="checkbox" ng-model="city" ng-true-value="London" ng-false-value=""> London <br/>
+		    
+
+
+
+		    <h5>Position</h5>
+		    <input type="checkbox" ng-model="position" ng-true-value="Full-Time" ng-false-value="">  Full-Time <br/>
+		    <input type="checkbox" ng-model="position" ng-true-value="Intern" ng-false-value=""> Intern <br/>
+		    <input type="checkbox" ng-model="position" ng-true-value="Full-Stack" ng-false-value=""> Full-Stack <br/>
+		    <input type="checkbox" ng-model="position" ng-true-value="Front-End" ng-false-value=""> Front-End <br/>
+		    <input type="checkbox" ng-model="position" ng-true-value="Back-End" ng-false-value=""> Back-End <br/>
+
+
+		    <h5>Skills</h5>
+		    <input type="checkbox" ng-model="query" ng-true-value="Ruby" ng-false-value=""> Ruby <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Rails" ng-false-value=""> Rails <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Python" ng-false-value=""> Python <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Node" ng-false-value=""> Node <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="PHP" ng-false-value=""> PHP <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="C#" ng-false-value=""> C# <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Javascript" ng-false-value=""> Javascript <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="jQuery" ng-false-value=""> jQuery <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="HTML" ng-false-value=""> HTML <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="CSS" ng-false-value=""> CSS <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="SQL" ng-false-value=""> SQL <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="MongoDB" ng-false-value=""> MongoDB <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Backbone" ng-false-value=""> Backbone <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Ember" ng-false-value=""> Ember <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="IOS" ng-false-value=""> IOS <br/>
+		    <input type="checkbox" ng-model="query" ng-true-value="Android" ng-false-value=""> Android <br/>
+
+
+		</div>
+		<div class="nine columns">
+			<div ng-controller="SeptCtrl">
+				<ul class="jobs">
+			        <li class ="list" ng-repeat="job in jobs | filter:query | filter: city | filter: perks | filter: position">
+			        	<div ng-bind-html-unsafe="job.listing"></div>
+			        	<div ng-bind-html-unsafe="job.hnurl"></div>
+			        </li>
+			    </ul>
+		    </div>
+		</div>
+	</div>

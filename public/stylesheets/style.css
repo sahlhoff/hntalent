@@ -1,8 +1,26 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 9px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.jobs {
+	list-style: none;
+	
+}
+
+.hn {
+	font: #ff6500;
+}
+
+.list {
+	border: 1px solid #888888;
+	padding: 25px 50px 25px 50px;
+	margin: 50px 0px 50px 0px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: 10px 10px 5px #888888;
 }

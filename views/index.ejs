@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="ngView">
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/foundation.min.css' />
+    <link rel='stylesheet' href='/stylesheets/angular-ui.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="/javascripts/angular-ui.js"></script>
+    <script src="/javascripts/angularApp.js"></script>
   </head>
   <body>
     <div class="fixed contain-to-grid">
 		<nav class="top-bar">
 		  <ul>
-		    <li class="name"><h1><a href="#">Title</a></h1></li>
-		    <li class="toggle-topbar"><a href="#"></a></li>
+		    <li class="name"><h1><a href="#"><span class="hn">HN</span>Talent</a></h1></li>
 		  </ul>
-		  <section>
-		    <ul class="left">
-		      <li><a href="#">Link</a></li>
-		    </ul>
-
-		    <ul class="right">
-		      <li><a href="#">Link</a></li>
-		    </ul>
-		  </section>
+			<section>
+				<div ng-controller="MainCntl">
+				 </div>
+			  <ul class="right">
+			    <li class="has-dropdown">
+				      <a href="#">Month</a>
+				      <ul class="dropdown">
+				      	<li><a href="#/">February 2013</a></li>
+				        <li><a href="#/january">January 2013</a></li>
+				        <li><a href="#/december">December 2012</a></li>
+				        <li><a href="#/november">November 2012</a></li>
+				        <li><a href="#/october">October 2012</a></li>
+				        <li><a href="#/september">September 2012</a></li>
+				      </ul>
+				    </li>
+			  </ul>
+			</section>
 		</nav>
 	</div>
+
+	<div ng-view></div>
 
   </body>
 </html>
